@@ -1,7 +1,7 @@
 # -*- org-latex-hyperref-template: ""; org-latex-prefer-user-labels: t -*-
 
 #+startup: content hideblocks
-#+options: H:2 timestamp:nil tex:t toc:nil
+#+options: H:2 timestamp:nil tex:t toc:nil author:nil
 #+EXPORT_FILE_NAME: runcode.tex
 
 #+LaTeX_CLASS: ltxdoc
