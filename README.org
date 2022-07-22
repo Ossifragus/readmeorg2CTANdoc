@@ -1,4 +1,14 @@
-# -*- org-latex-hyperref-template: "" -*-
+# -*- org-latex-hyperref-template: ""; org-latex-prefer-user-labels: t -*-
+
+#+startup: content hideblocks
+#+options: H:2 timestamp:nil tex:t toc:nil
+#+EXPORT_FILE_NAME: runcode.tex
+
+#+LaTeX_CLASS: ltxdoc
+#+latex_header:
+#+latex_header: \author{Haim Bar and HaiYing Wang \\haim.bar@uconn.edu, haiying.wang@uconn.edu}
+#+latex_header: \ProvidesPackage{runcode}[2022/07/18 runcode v1.4]
+
 #+TITLE: The *runcode* package
 
 #+begin_export latex
@@ -176,7 +186,7 @@ be customized with =\tcbset=,
     server by default.
   - =Arg2= is the [[https://julialang.org/][Julia]] source code to run.
     If the [[https://julialang.org/][Julia]] source code is wrapped
-    between "```" on both sides (as in the markdown grammar), then it
+    between "=```=" on both sides (as in the markdown grammar), then it
     will be implemented directly; otherwise the code will be written to
     a file on the disk and then be called.
   - =Arg3= has the same effect as that of the basic command =\inln=.
@@ -273,18 +283,5 @@ Science with LaTeX,
 [https://jds-online.org/journal/JDS/article/103/info] J. data sci. 2021;
 19, no. 1, 111-125, DOI 10.6339/21-JDS998/
 
-*** Export Configuration                                  :noexport:
 
-#+startup: content hideblocks
-#+options: H:2 timestamp:nil tasks tex:t toc:nil
-#+options: author:nil creator:nil
-
-#+latex_header:
-#+latex_header: \ProvidesPackage{runcode}[2022/07/18 runcode v1.4]
-#+latex_header: \author{Haim Bar and HaiYing Wang \\haim.bar@uconn.edu, haiying.wang@uconn.edu}
-
-#+LaTeX_CLASS: ltxdoc
-# #+latex_compiler: lualatex 
-# #+latex_class_options: [serif,hidelinks]
-# #+latex_header: \usepackage{fontspec,unicode-math}
 
