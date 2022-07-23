@@ -10,7 +10,9 @@
 
 #+TITLE: The *runcode* package
 
-@@latex:\begin{abstract}@@
+#+begin_export latex
+\begin{abstract}
+#+end_export
 
 =runcode= is a LaTeX package that executes programming source codes (including
 all command line tools) from LaTeX, and embeds the results in the resulting pdf
