@@ -39,7 +39,8 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: runcode.tex
-          # - uses: actions/upload-artifact@v2
-          # with:
-          #   name: PDF
-          #   path: runcode.pdf
+          latexmk_shell_escape: true
+        - uses: actions/upload-artifact@v2
+          with:
+            name: PDF
+            path: runcode.pdf
