@@ -12,7 +12,6 @@
 \usepackage{capt-of}
 \usepackage{hyperref}
 \usepackage{minted}
-
 \author{Haim Bar and HaiYing Wang \\haim.bar@uconn.edu, haiying.wang@uconn.edu}
 \ProvidesPackage{runcode}[2022/07/18 runcode v1.4]
 \date{\today}
@@ -22,20 +21,15 @@
 \maketitle
 \begin{abstract}
 
- \texttt{runcode} is a \LaTeX{} package that executes programming source codes
-(including all command line tools) from \LaTeX{}, and embeds the results in
-the resulting pdf file. Many programming languages can be easily used
-and any command-line executable can be invoked when preparing the pdf
-file from a tex file. \texttt{runcode} is also available on
-\href{https://ctan.org/pkg/runcode}{CTAN}.
+\texttt{runcode} is a \LaTeX{} package that executes programming source codes (including
+all command line tools) from \LaTeX{}, and embeds the results in the resulting pdf
+file. Many programming languages can be easily used and any command-line
+executable can be invoked when preparing the pdf file from a tex file. \texttt{runcode}
+is also available on \href{https://ctan.org/pkg/runcode}{CTAN}.
 
-It is recommended to use this package in the server mode together with
-the \href{https://www.python.org/}{Python}
-\href{https://pypi.org/project/talk2stat/}{talk2stat} package. Currently,
-the server mode supports \href{https://julialang.org/}{Julia},
-\href{https://www.mathworks.com/products/matlab.html}{MatLab},
-\href{https://www.python.org/}{Python}, and
-\href{https://www.r-project.org/}{R}. More languages will be added.
+It is recommended to use this package in the server mode together with the
+\href{https://www.python.org/}{Python} \href{https://pypi.org/project/talk2stat/}{talk2stat} package. Currently, the server mode supports \href{https://julialang.org/}{Julia}, \href{https://www.mathworks.com/products/matlab.html}{MatLab},
+\href{https://www.python.org/}{Python}, and \href{https://www.r-project.org/}{R}. More languages will be added.
 
 For more details and usage examples and troubleshooting, refer to the
 package’s github repository, at \url{https://github.com/Ossifragus/runcode}.
@@ -43,7 +37,7 @@ package’s github repository, at \url{https://github.com/Ossifragus/runcode}.
 \end{abstract}
 
 \section{Installation}
-\label{installation}
+\label{sec:org78b2106}
 You can simply put the runcode.sty file in the \LaTeX{} project folder.
 
 The server mode requires the
@@ -58,9 +52,9 @@ pip3 install talk2stat
 compiling a \LaTeX{} document.
 
 \section{Usage}
-\label{usage}
+\label{sec:org5eaf822}
 \subsection{Load the package:}
-\label{load-the-package}
+\label{sec:org8e8159c}
 \begin{minted}[]{latex}
 \usepackage[options]{runcode}
 \end{minted}
@@ -120,7 +114,7 @@ be customized with \texttt{\textbackslash{}tcbset},
 \end{minted}
 
 \subsection{Basic commands:}
-\label{basic-commands}
+\label{sec:orgb164d4b}
 \begin{itemize}
 \item \texttt{\textbackslash{}runExtCode\{Arg1\}\{Arg2\}\{Arg3\}[Arg4]} runs an external code.
 
@@ -181,7 +175,7 @@ text.
 \end{itemize}
 
 \subsection{Language specific shortcuts:}
-\label{language-specific-shortcuts}
+\label{sec:org0560720}
 \href{https://julialang.org/}{Julia}
 
 \begin{itemize}
@@ -239,32 +233,6 @@ will be written to a file on the disk and then be called.
 \end{itemize}
 \end{itemize}
 
-\href{https://www.r-project.org/}{R}
-
-\begin{itemize}
-\item \texttt{\textbackslash{}runR[Arg1]\{Arg2\}\{Arg3\}[Arg4]} runs an external
-\href{https://www.r-project.org/}{R} code file.
-\begin{itemize}
-\item \texttt{Arg1} is optional and uses
-\href{https://pypi.org/project/talk2stat/}{talk2stat}'s
-\href{https://www.r-project.org/}{R} server by default.
-\item \texttt{Arg2}, \texttt{Arg3}, and \texttt{Arg4} have the same effects as those of the
-basic command \texttt{\textbackslash{}runExtCode}.
-\end{itemize}
-\item \texttt{\textbackslash{}inlnR[Arg1]\{Arg2\}[Arg3]} runs \href{https://www.r-project.org/}{R}
-source code (\texttt{Arg2}) and displays the output in line.
-\begin{itemize}
-\item \texttt{Arg1} is optional and uses the \href{https://www.r-project.org/}{R}
-server by default.
-\item \texttt{Arg2} is the \href{https://www.r-project.org/}{R} source code to run.
-If the \href{https://www.r-project.org/}{R} source code is wrapped
-between "```" on both sides (as in the markdown grammar), then it
-will be implemented directly; otherwise the code will be written to
-a file on the disk and then be called.
-\item \texttt{Arg3} has the same effect as that of the basic command \texttt{\textbackslash{}inln}.
-\end{itemize}
-\end{itemize}
-
 \href{https://www.python.org/}{Python}
 
 \begin{itemize}
@@ -305,9 +273,35 @@ installed via \texttt{pip3 install dill}.
 \end{itemize}
 \end{itemize}
 
+\href{https://www.r-project.org/}{R}
+
+\begin{itemize}
+\item \texttt{\textbackslash{}runR[Arg1]\{Arg2\}\{Arg3\}[Arg4]} runs an external
+\href{https://www.r-project.org/}{R} code file.
+\begin{itemize}
+\item \texttt{Arg1} is optional and uses
+\href{https://pypi.org/project/talk2stat/}{talk2stat}'s
+\href{https://www.r-project.org/}{R} server by default.
+\item \texttt{Arg2}, \texttt{Arg3}, and \texttt{Arg4} have the same effects as those of the
+basic command \texttt{\textbackslash{}runExtCode}.
+\end{itemize}
+\item \texttt{\textbackslash{}inlnR[Arg1]\{Arg2\}[Arg3]} runs \href{https://www.r-project.org/}{R}
+source code (\texttt{Arg2}) and displays the output in line.
+\begin{itemize}
+\item \texttt{Arg1} is optional and uses the \href{https://www.r-project.org/}{R}
+server by default.
+\item \texttt{Arg2} is the \href{https://www.r-project.org/}{R} source code to run.
+If the \href{https://www.r-project.org/}{R} source code is wrapped
+between "```" on both sides (as in the markdown grammar), then it
+will be implemented directly; otherwise the code will be written to
+a file on the disk and then be called.
+\item \texttt{Arg3} has the same effect as that of the basic command \texttt{\textbackslash{}inln}.
+\end{itemize}
+\end{itemize}
+
 
 \section{Contributing}
-\label{contributing}
+\label{sec:orgc03356d}
 We welcome your contributions to this package by opening issues on
 GitHub and/or making a pull request. We also appreciate more example
 documents written using \texttt{runcode}.
