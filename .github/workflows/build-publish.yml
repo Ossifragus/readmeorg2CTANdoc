@@ -28,7 +28,12 @@
 #         publish_dir: ./public
 
 name: Build LaTeX document
-on: [push]
+# on: [push]
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
 jobs:
   build_latex:
     runs-on: ubuntu-latest
@@ -46,3 +51,6 @@ jobs:
         with:
           name: PDF
           path: runcode.pdf
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
