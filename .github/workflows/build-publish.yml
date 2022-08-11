@@ -35,11 +35,11 @@ jobs:
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v2
-        - name: Compile LaTeX document
-          uses: xu-cheng/latex-action@v2
-          with:
-            root_file: runcode.tex
-        - uses: actions/upload-artifact@v2
-          with:
-            name: PDF
-            path: runcode.pdf
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: runcode.tex
+          # - uses: actions/upload-artifact@v2
+          # with:
+          #   name: PDF
+          #   path: runcode.pdf
