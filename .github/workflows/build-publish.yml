@@ -46,30 +46,20 @@ jobs:
       with:
         version: 28.1
 
-#     - name: run
-#       run: ./publishWeb.sh
-
-      # - name: Set up Git repository
-      #   uses: actions/checkout@v2
-      # - name: Compile LaTeX document
-        # uses: xu-cheng/latex-action@v2
-        # with:
-        #   root_file: runcode.tex
-        #   latexmk_shell_escape: true
-
-    - name: run
+    - name: setupLatex
       uses: xu-cheng/latex-action@v2
+    - name: run
       run: ./run.sh
 
-      - name: upload pdf
-        uses: actions/upload-artifact@v2
-        with:
-          name: PDF
-          path: runcode.pdf
+    - name: upload pdf
+      uses: actions/upload-artifact@v2
+      with:
+        name: PDF
+        path: runcode.pdf
 
-      - name: Release
-        uses: softprops/action-gh-release@v1
-        with:
-          files: |
-            runcode.pdf
-            runcode.tex
+    - name: Release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: |
+          runcode.pdf
+          runcode.tex
