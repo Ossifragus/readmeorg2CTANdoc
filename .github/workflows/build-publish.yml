@@ -38,13 +38,28 @@ jobs:
   build_latex:
     runs-on: ubuntu-latest
     steps:
-      - name: Set up Git repository
-        uses: actions/checkout@v2
-      - name: Compile LaTeX document
-        uses: xu-cheng/latex-action@v2
-        with:
-          root_file: runcode.tex
-          latexmk_shell_escape: true
+    - uses: actions/checkout@master
+      with:
+        fetch-depth: 1
+    - name: seupEmacs
+      uses: purcell/setup-emacs@master
+      with:
+        version: 28.1
+
+#     - name: run
+#       run: ./publishWeb.sh
+
+      # - name: Set up Git repository
+      #   uses: actions/checkout@v2
+      # - name: Compile LaTeX document
+        # uses: xu-cheng/latex-action@v2
+        # with:
+        #   root_file: runcode.tex
+        #   latexmk_shell_escape: true
+
+    - name: run
+      uses: xu-cheng/latex-action@v2
+      run: ./run.sh
 
       - name: upload pdf
         uses: actions/upload-artifact@v2

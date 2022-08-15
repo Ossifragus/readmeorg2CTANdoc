@@ -4,8 +4,6 @@ others/
 _minted-runcode/
 publishWeb.el
 publishWeb.sh
-run.el
-run.sh
 runcode.aux
 runcode.hd
 runcode.log
