@@ -46,10 +46,8 @@ jobs:
       with:
         version: 28.1
 
-    - name: setupLatex
-      uses: xu-cheng/latex-action@v2
-    - name: run
-      run: ./run.sh
+    # - name: setupLatex
+    - uses: xu-cheng/latex-action@v2
 
     - name: upload pdf
       uses: actions/upload-artifact@v2
