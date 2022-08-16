@@ -1,4 +1,4 @@
-name: Build LaTeX document
+name: Release for CTAN
 # on: [push]
 
 on:
@@ -18,7 +18,7 @@ jobs:
         version: 28.1
 
     - name: generate runcode.tex
-      run: ./run.sh
+      run: ./org2tex.sh
 
     - name: Compile LaTeX document
       uses: xu-cheng/latex-action@v2
