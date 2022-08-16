@@ -27,7 +27,7 @@ jobs:
         latexmk_shell_escape: true
 
     - name: create CTAN tarball 
-      run: ./ctan.sh
+      run: ./.ctan.sh
 
     - name: Release
       uses: softprops/action-gh-release@v1
