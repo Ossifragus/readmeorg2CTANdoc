@@ -48,6 +48,7 @@ pip3 install talk2stat
 *Note*: =runcode= requires to enable the =shell-escape= option when
 compiling a LaTeX document.
 
+
 ** Usage
 :PROPERTIES:
 :CUSTOM_ID: usage
@@ -262,6 +263,23 @@ be customized with =\tcbset=,
     will be implemented directly; otherwise the code will be written to
     a file on the disk and then be called.
   - =Arg3= has the same effect as that of the basic command =\inln=.
+
+
+** Revisions
+- v1.7, August 14, 2022: changed the tmp/ folder to generated/ in order to
+  conform with CTAN suggestions; renamed the troubleshooting file.
+- v1.6, August 10, 2022: stop only configured/running servers; a new
+  reducedspace option - some document classes put more space after the code box;
+  changed the default timeout of servers to 60 seconds; expanded the
+  troubleshooting document. New examples are now available on GitHub, including
+  how to collaborate with people who use Overleaf.
+- v1.5, July 23, 2022: Removed the utf8x option when loading inputenc due to a
+  conflict with hyperref.
+- v1.4, July 18, 2022: Fixed a bug in the cache mode.
+- v1.3, May 14, 2022: Removed the hard-coded minted options.
+- v1.2, May 3, 2022: Added python options (server and batch).
+- v1.1, April 17, 2021: Added a nohup option; improved error handling (missing
+  code files, zero bytes in output files.)
 
 
 ** Contributing
