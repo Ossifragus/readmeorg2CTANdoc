@@ -7,7 +7,7 @@
 #+LaTeX_CLASS: ltxdoc
 #+latex_header: \author{Haim Bar and HaiYing Wang \\haim.bar@uconn.edu, haiying.wang@uconn.edu}
 
-#+TITLE: The *runcode* package
+#+TITLE: The *runcode* package v0.1.2
 
 #+begin_export latex
 \begin{abstract}
