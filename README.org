@@ -1,4 +1,6 @@
 # -*- org-latex-hyperref-template: ""; org-latex-prefer-user-labels: t -*-
+# LaTeX Package: runcode 2022/08/10 v1.8
+
 
 #+startup: content hideblocks
 #+options: H:2 timestamp:nil tex:t toc:nil author:nil
@@ -7,7 +9,7 @@
 #+LaTeX_CLASS: ltxdoc
 #+latex_header: \author{Haim Bar and HaiYing Wang \\haim.bar@uconn.edu, haiying.wang@uconn.edu}
 
-#+TITLE: The *runcode* package v0.1.2
+#+TITLE: The *runcode* package
 
 #+begin_export latex
 \begin{abstract}
@@ -265,7 +267,7 @@ be customized with =\tcbset=,
 
 
 ** Revisions
-- v 1.8, this is just a test
+- v1.8, 2022/08/10, this is just a test
 - v1.7, August 14, 2022: changed the tmp/ folder to generated/ in order to
   conform with CTAN suggestions; renamed the troubleshooting file.
 - v1.6, August 10, 2022: stop only configured/running servers; a new

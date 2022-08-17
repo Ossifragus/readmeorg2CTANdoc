@@ -1,10 +1,9 @@
 name: Release for CTAN
-# on: [push]
 
 on:
   push:
     tags:
-      - "v*.*.*"
+      - "v*.*"
 jobs:
   build_latex:
     runs-on: ubuntu-latest
