@@ -1,6 +1,14 @@
 #!/bin/bash
 
-tar cpvfhz runcode.tar.gz runcode.sty runcode.tex runcode.pdf troubleshoot.tex troubleshoot.pdf README generated
+mkdir runcode
+
+cp -r runcode.sty runcode.tex runcode.pdf roubleshoot.tex troubleshoot.pdf README generated runcode/
+
+tar cpvfhz runcode.tar.gz runcode/
+
+rm -r runcode 
+
+# tar cpvfhz runcode.tar.gz runcode.sty runcode.tex runcode.pdf troubleshoot.tex troubleshoot.pdf README generated
 
 # rm README header.tex 
 
