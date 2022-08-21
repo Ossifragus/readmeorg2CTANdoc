@@ -2,7 +2,7 @@
 
 mkdir runcode
 
-cp -r runcode.sty runcode.tex runcode.pdf roubleshoot.tex troubleshoot.pdf README generated runcode/
+cp -r runcode.sty runcode.tex runcode.pdf runcode_troubleshoot.tex runcode_troubleshoot.pdf README generated runcode/
 
 tar cpvfhz runcode.tar.gz runcode/
 
